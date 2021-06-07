@@ -23,6 +23,7 @@ with scope("config") as c:
         c.release_packages_path = os.environ["SSE_REZ_REPO_RELEASE_EXT"]
 
     #c.build_thread_count = "physical_cores"
+    c.build_thread_count = 4
 
 requires = [
     "gcc-6.3",
@@ -30,12 +31,11 @@ requires = [
 
 private_build_requires = [
     "cmake",
-    "llvm",
-    "python-2",
 ]
 
 variants = [
-    ["platform-linux", "arch-x86_64", "os-centos-7"]
+    ["platform-linux", "arch-x86_64", "os-centos-7", "python-2.7"],
+    ["platform-linux", "arch-x86_64", "os-centos-7", "python-3.7"],
 ]
 
 # If want to use Ninja, run the `rez-build -i --cmake-build-system "ninja"`

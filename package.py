@@ -23,7 +23,6 @@ with scope("config") as c:
         c.release_packages_path = os.environ["SSE_REZ_REPO_RELEASE_EXT"]
 
     #c.build_thread_count = "physical_cores"
-    c.build_thread_count = 4
 
 requires = [
     "gcc-6.3",

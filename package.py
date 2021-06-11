@@ -25,7 +25,6 @@ with scope("config") as c:
     #c.build_thread_count = "physical_cores"
 
 requires = [
-    "gcc-6.3",
 ]
 
 private_build_requires = [
@@ -41,6 +40,9 @@ variants = [
 # or `rez-release --cmake-build-system "ninja"`
 
 uuid = "repository.qtbase"
+
+def pre_build_commands():
+    command("source /opt/rh/devtoolset-6/enable")
 
 def commands():
     env.PATH.prepend("{root}/bin")

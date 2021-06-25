@@ -38,6 +38,9 @@ variants = [
 # If want to use Ninja, run the `rez-build -i --cmake-build-system "ninja"`
 # or `rez-release --cmake-build-system "ninja"`
 
+# NOTE: Make sure you have installed:
+# sudo yum install xcb-util-wm-devel xcb-util-image-devel xcb-util-keysyms-devel libxcb-devel xcb-util-renderutil-devel libxkbcommon-x11-devel libxkbcommon-devel
+
 uuid = "repository.qtbase"
 
 def pre_build_commands():

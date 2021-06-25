@@ -28,7 +28,6 @@ requires = [
 ]
 
 private_build_requires = [
-    "cmake",
 ]
 
 variants = [

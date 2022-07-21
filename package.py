@@ -31,8 +31,9 @@ private_build_requires = [
 ]
 
 variants = [
-    ["platform-linux", "arch-x86_64", "os-centos-7", "python-2.7"],
-    ["platform-linux", "arch-x86_64", "os-centos-7", "python-3.7"],
+    ["platform-linux", "arch-x86_64", "os-centos-7", "python-2.7.5"],
+    ["platform-linux", "arch-x86_64", "os-centos-7", "python-3.7.7"],
+    ["platform-linux", "arch-x86_64", "os-centos-7", "python-3.9.7"],
 ]
 
 # If want to use Ninja, run the `rez-build -i --cmake-build-system "ninja"`

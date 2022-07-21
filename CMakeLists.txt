@@ -18,7 +18,7 @@ ExternalProject_add(
     BINARY_DIR $ENV{REZ_BUILD_PATH}
     PREFIX ${pck_prefix}
     UPDATE_COMMAND ""
-    CONFIGURE_COMMAND $ENV{REZ_BUILD_SOURCE_PATH}/configure --prefix=${CMAKE_INSTALL_PREFIX} -opensource -nomake tests -nomake examples
+    CONFIGURE_COMMAND $ENV{REZ_BUILD_SOURCE_PATH}/configure --prefix=${CMAKE_INSTALL_PREFIX} -opensource -confirm-license -nomake tests -nomake examples
     BUILD_COMMAND make -j$ENV{REZ_BUILD_THREAD_COUNT}
     INSTALL_COMMAND ""
     BUILD_IN_SOURCE 0
